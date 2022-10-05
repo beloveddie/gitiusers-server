@@ -2,11 +2,22 @@
   "name": "gitiusers-server",
   "version": "1.0.0",
   "description": "backend app for gitiusers",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "dependencies": {
+    "apollo-datasource-rest": "^0.11.0",
+    "apollo-server": "^3.0.0",
+    "graphql": "^15.5.1"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0",
+    "nodemon": "^2.0.4"
   },
   "keywords": [],
-  "author": "eddiebee",
-  "license": "ISC"
+  "author": "Eddie Otudor @eddiebee",
+  "license": "MIT",
+  "private": "true"
 }
