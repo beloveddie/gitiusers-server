@@ -1,9 +1,16 @@
 const { ApolloServer } = require("apollo-server");
 const typeDefs = require("./schema");
+const resolvers = require("./resolvers");
+const GitHubUsersAPI = require("./datasources/github-users-api");
 
 const server = new ApolloServer({
   typeDefs,
-  mocks: true,
+  resolvers,
+  dataSources: () => {
+    return {
+      gitHubUsersAPI: new GitHubUsersAPI(),
+    };
+  },
 });
 
 server.listen().then(({ url }) => {
