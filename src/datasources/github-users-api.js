@@ -10,6 +10,10 @@ class GitHubUsersAPI extends RESTDataSource {
   getUsersForHome() {
     return this.get("users");
   }
+
+  getUser(userID) {
+    return this.get(`users/${userID}`);
+  }
 }
 
 module.exports = GitHubUsersAPI;
