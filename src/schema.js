@@ -15,6 +15,8 @@ const typeDefs = gql`
     id: ID!
     "A login used as a User login detail"
     login: String!
+    "The name os a user"
+    name: String!
     "An avatar for a User"
     avatar_url: String!
     "A brief description of a User"
