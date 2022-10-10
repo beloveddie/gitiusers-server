@@ -11,6 +11,10 @@ const resolvers = {
       }));
       return usersWithDescription;
     },
+    // get a single user by ID, for the user page
+    user: async (_, { id }, { dataSources }) => {
+      return await dataSources.gitHubUsersAPI.getUser(id);
+    },
   },
 };
 
