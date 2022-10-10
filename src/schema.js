@@ -13,7 +13,7 @@ const typeDefs = gql`
   type User {
     "A unique Identifier for a User"
     id: ID!
-    "A name used as a User login detail"
+    "A login used as a User login detail"
     login: String!
     "An avatar for a User"
     avatar_url: String!
