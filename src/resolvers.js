@@ -16,6 +16,11 @@ const resolvers = {
       return await dataSources.gitHubUsersAPI.getUser(id);
     },
   },
+  User: {
+    description: () => {
+      return generateSentence(10);
+    },
+  },
 };
 
 module.exports = resolvers;
