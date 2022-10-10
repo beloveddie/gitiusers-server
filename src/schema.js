@@ -6,7 +6,7 @@ const typeDefs = gql`
     "Query to get an array of Users for our Home grid."
     usersForHome: [User!]!
     "Query to get a single User object."
-    user: User!
+    user(id: ID!): User!
   }
 
   "A type representing a GitHub User details"
