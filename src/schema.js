@@ -4,7 +4,7 @@ const typeDefs = gql`
   # Entry points to our Schema
   type Query {
     "Query to get an array of Users for our Home grid."
-    usersForHome: [User!]!
+    usersForHomePage: [User!]!
     "Query to get a single User object."
     user(id: ID!): User!
   }

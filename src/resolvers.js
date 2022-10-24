@@ -3,7 +3,7 @@ const { generateSentence } = require("dummy-text-generator");
 const resolvers = {
   Query: {
     // returns an array of Users that will used to populate the Homepage of the web client
-    usersForHome: async (_, __, { dataSources }) => {
+    usersForHomePage: async (_, __, { dataSources }) => {
       return await dataSources.gitHubUsersAPI.getUsersForHome();
     },
     // get a single user by ID, for the user page
